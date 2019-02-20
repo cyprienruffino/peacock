@@ -45,23 +45,26 @@
 
                 <Button
                     android:id="@+id/compute_dog"
+                    android:onClick="clickRenton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/compute" />
 
                 <Button
                     android:id="@+id/reset_cards"
+                    android:onClick="clickReset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/reset" />
             </LinearLayout>
 
             <TextView
+                android:id="@+id/renton_value"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text=" 0.0"
-                android:textSize="50dp" />
+                android:textSize="25dp" />
         </LinearLayout>
 
         <GridView
