@@ -148,20 +148,15 @@ public class RentonActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        populateCardsGrid((GridView) findViewById(R.id.dog_gridview));
+        GridView grid = (GridView) findViewById(R.id.dog_gridview);
+        grid.setAdapter(new ImageAdapter(this, this.cardImages));
         this.card1 = -1;
         this.card2 = -1;
         this.card3 = -1;
-
-
-    }
-
-    private void populateCardsGrid(GridView dogGrid) {
-        GridView grid = (GridView) findViewById(R.id.dog_gridview);
-        grid.setAdapter(new ImageAdapter(this, this.cardImages));
     }
 
     private void addCard(int card){
+        if (card < 14 || (card != card1 && card != card2 && card != card3))
         if (this.card1 == -1){
             this.card1 = card;
             ((ImageButton) findViewById(R.id.card1)).setImageResource(this.cardImages[card]);
