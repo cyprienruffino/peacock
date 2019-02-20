@@ -256,6 +256,6 @@ public class RentonActivity extends AppCompatActivity
         ((ImageView) findViewById(R.id.card1)).setImageResource(R.drawable.empty);
         ((ImageView) findViewById(R.id.card2)).setImageResource(R.drawable.empty);
         ((ImageView) findViewById(R.id.card3)).setImageResource(R.drawable.empty);
-        ((TextView) findViewById(R.id.renton_value)).setText(Float.toString((0f)));
+        ((TextView) findViewById(R.id.renton_value)).setText(String.format("%.2f", 0f));
     }
 }
