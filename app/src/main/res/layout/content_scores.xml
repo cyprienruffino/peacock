@@ -5,19 +5,181 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ScoresActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context=".ScoreActivity"
+    tools:showIn="@layout/app_bar_scores">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/points"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:gravity="bottom"/>
+
+            <EditText
+                android:id="@+id/points"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/contract"
+                android:layout_weight="1"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/contract"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </Spinner>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/oudlers"
+                android:layout_weight="1"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/oudlers"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </Spinner>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/handful"
+                android:layout_weight="1"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/handful"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </Spinner>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/slam"
+                android:layout_weight="1"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/slam"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/aubout"
+                android:layout_weight="1"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/oneatend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compute"
+                android:layout_weight="1"
+                android:onClick="computeHandler"/>
+
+        </LinearLayout>
+
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TODO"
-            android:textSize="100dp"/>
+            android:id="@+id/finalscore"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="00"
+            android:textSize="140sp"
+            android:gravity="center"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

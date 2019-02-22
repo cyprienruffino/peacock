@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="oudlers">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="contracts">
+        <item>@string/small</item>
+        <item>@string/guard</item>
+        <item>@string/guardw</item>
+        <item>@string/guarda</item>
+    </string-array>
+
+    <string-array name="handfuls">
+        <item>@string/no</item>
+        <item>@string/simple</item>
+        <item>@string/_double</item>
+        <item>@string/triple</item>
+    </string-array>
+    <string-array name="slams">
+        <item>@string/no</item>
+        <item>@string/unannounced</item>
+        <item>@string/announced</item>
+        <item>@string/failed</item>
+    </string-array>
+    <string-array name="oneatend">
+        <item>@string/no</item>
+        <item>@string/kept</item>
+        <item>@string/lost</item>
+    </string-array>
+</resources>

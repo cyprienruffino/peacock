@@ -1,6 +1,7 @@
 package com.example.peacock;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -135,7 +136,7 @@ public class RentonActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_renton);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -210,9 +211,14 @@ public class RentonActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_renton) {
-
         } else if (id == R.id.nav_scores) {
-
+            Intent intent = new Intent(this, ScoreActivity.class);
+            startActivity(intent);
+            this.finish();
+        } else if (id == R.id.nav_leaderboard) {
+            Intent intent = new Intent(this, LeaderboardActivity.class);
+            startActivity(intent);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

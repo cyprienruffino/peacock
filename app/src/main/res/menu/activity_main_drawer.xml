@@ -5,17 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_scores"
+            android:icon="@drawable/scoreslogo"
+            android:title="@string/enter_score" />
+        <item
             android:id="@+id/nav_renton"
             android:icon="@drawable/doglogo"
             android:title="@string/renton" />
         <item
-            android:id="@+id/nav_scores"
-            android:icon="@drawable/scoreslogo"
-            android:title="@string/enter_scores" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Placeholder" />
+            android:id="@+id/nav_leaderboard"
+            android:icon="@drawable/leaderboardlogo"
+            android:title="@string/leaderboard" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
