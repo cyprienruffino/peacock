@@ -120,17 +120,17 @@ public class ScoreActivity extends AppCompatActivity
 
     public void computeHandler(View view) {
         closeKeyboard();
-        ((TextView) findViewById(R.id.finalscore)).setText(Integer.toString(computeFinalScore()));
+        ((TextView) findViewById(R.id.finalscore)).setText(Float.toString(computeFinalScore()));
     }
 
-    private int computeFinalScore() {
-        int extraPoints = 0;
-        int finalScore = 0;
+    private float computeFinalScore() {
+        float extraPoints = 0;
+        float finalScore;
         int handfulPoints = 0;
         int multiplyer = 0;
         int oneAtEndPoints = 0;
         int slamPoints = 0;
-        int points = Integer.parseInt(((EditText) findViewById(R.id.points)).getText().toString());
+        float points = Float.parseFloat(((EditText) findViewById(R.id.points)).getText().toString());
         int oudlers = Integer.parseInt(((Spinner) findViewById(R.id.oudlers)).getSelectedItem().toString());
         String contract = ((Spinner) findViewById(R.id.contract)).getSelectedItem().toString();
         String handful = ((Spinner) findViewById(R.id.handful)).getSelectedItem().toString();
