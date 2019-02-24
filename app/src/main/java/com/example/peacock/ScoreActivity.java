@@ -127,7 +127,7 @@ public class ScoreActivity extends AppCompatActivity
         float extraPoints = 0;
         float finalScore;
         int handfulPoints = 0;
-        int multiplyer = 0;
+        int multiplier = 0;
         int oneAtEndPoints = 0;
         int slamPoints = 0;
         float points = Float.parseFloat(((EditText) findViewById(R.id.points)).getText().toString());
@@ -137,10 +137,10 @@ public class ScoreActivity extends AppCompatActivity
         String slam = ((Spinner) findViewById(R.id.slam)).getSelectedItem().toString();
         String oneAtEnd = ((Spinner) findViewById(R.id.oneatend)).getSelectedItem().toString();
 
-        if (contract.equals(getResources().getString(R.string.small))) multiplyer=2;
-        if (contract.equals(getResources().getString(R.string.guard))) multiplyer=4;
-        if (contract.equals(getResources().getString(R.string.guardw))) multiplyer=6;
-        if (contract.equals(getResources().getString(R.string.guarda))) multiplyer=8;
+        if (contract.equals(getResources().getString(R.string.small))) multiplier=2;
+        if (contract.equals(getResources().getString(R.string.guard))) multiplier=4;
+        if (contract.equals(getResources().getString(R.string.guardw))) multiplier=6;
+        if (contract.equals(getResources().getString(R.string.guarda))) multiplier=8;
 
         if (oneAtEnd.equals(getResources().getString(R.string.kept))) oneAtEndPoints=10;
         if (oneAtEnd.equals(getResources().getString(R.string.lost))) oneAtEndPoints=-10;
@@ -161,7 +161,7 @@ public class ScoreActivity extends AppCompatActivity
             if (handful.equals(getResources().getString(R.string._double))) handfulPoints=90;
             if (handful.equals(getResources().getString(R.string.triple))) handfulPoints=120;
 
-            finalScore = (extraPoints + oneAtEndPoints + 25) * multiplyer + handfulPoints + slamPoints;
+            finalScore = (extraPoints + oneAtEndPoints + 25) * multiplier + handfulPoints + slamPoints;
 
 
         } else{
@@ -169,7 +169,7 @@ public class ScoreActivity extends AppCompatActivity
             if (handful.equals(getResources().getString(R.string._double))) handfulPoints=-60;
             if (handful.equals(getResources().getString(R.string.triple))) handfulPoints=-80;
 
-            finalScore = (extraPoints + oneAtEndPoints - 25) * multiplyer + handfulPoints + slamPoints;
+            finalScore = (extraPoints + oneAtEndPoints - 25) * multiplier + handfulPoints + slamPoints;
         }
 
         return finalScore;
