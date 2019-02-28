@@ -40,7 +40,8 @@ public class ScoreActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         populateSpinner(R.id.oudlers, R.array.oudlers);
-        populateSpinner(R.id.handful, R.array.handfuls);
+        populateSpinner(R.id.attack_handful, R.array.handfuls);
+        populateSpinner(R.id.defense_handful, R.array.handfuls);
         populateSpinner(R.id.contract, R.array.contracts);
         populateSpinner(R.id.slam, R.array.slams);
         populateSpinner(R.id.oneatend, R.array.oneatend);
@@ -133,7 +134,8 @@ public class ScoreActivity extends AppCompatActivity
         float points = Float.parseFloat(((EditText) findViewById(R.id.points)).getText().toString());
         int oudlers = Integer.parseInt(((Spinner) findViewById(R.id.oudlers)).getSelectedItem().toString());
         String contract = ((Spinner) findViewById(R.id.contract)).getSelectedItem().toString();
-        String handful = ((Spinner) findViewById(R.id.handful)).getSelectedItem().toString();
+        String attack_handful = ((Spinner) findViewById(R.id.attack_handful)).getSelectedItem().toString();
+        String defense_handful = ((Spinner) findViewById(R.id.defense_handful)).getSelectedItem().toString();
         String slam = ((Spinner) findViewById(R.id.slam)).getSelectedItem().toString();
         String oneAtEnd = ((Spinner) findViewById(R.id.oneatend)).getSelectedItem().toString();
 
@@ -156,20 +158,18 @@ public class ScoreActivity extends AppCompatActivity
             case 3: extraPoints = points - 36; break;
         }
 
+        if (attack_handful.equals(getResources().getString(R.string.simple))) handfulPoints = 40;
+        if (attack_handful.equals(getResources().getString(R.string._double))) handfulPoints = 60;
+        if (attack_handful.equals(getResources().getString(R.string.triple))) handfulPoints = 80;
+
+        if (defense_handful.equals(getResources().getString(R.string.simple))) handfulPoints += 40;
+        if (defense_handful.equals(getResources().getString(R.string._double))) handfulPoints += 60;
+        if (defense_handful.equals(getResources().getString(R.string.triple))) handfulPoints += 80;
+
         if (extraPoints >= 0){
-            if (handful.equals(getResources().getString(R.string.simple))) handfulPoints=60;
-            if (handful.equals(getResources().getString(R.string._double))) handfulPoints=90;
-            if (handful.equals(getResources().getString(R.string.triple))) handfulPoints=120;
-
             finalScore = (extraPoints + oneAtEndPoints + 25) * multiplier + handfulPoints + slamPoints;
-
-
         } else{
-            if (handful.equals(getResources().getString(R.string.simple))) handfulPoints=-40;
-            if (handful.equals(getResources().getString(R.string._double))) handfulPoints=-60;
-            if (handful.equals(getResources().getString(R.string.triple))) handfulPoints=-80;
-
-            finalScore = (extraPoints + oneAtEndPoints - 25) * multiplier + handfulPoints + slamPoints;
+            finalScore = (extraPoints + oneAtEndPoints - 25) * multiplier - handfulPoints + slamPoints;
         }
 
         return finalScore;

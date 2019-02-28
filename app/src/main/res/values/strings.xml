@@ -15,7 +15,8 @@
     <string name="aubout">One at the end</string>
     <string name="contract">Contract</string>
     <string name="oudlers">Oudlers</string>
-    <string name="handful">Handful</string>
+    <string name="attack_handful">Attack handful</string>
+    <string name="defense_handful">Defense handful</string>
     <string name="slam">Slam</string>
     <string name="unannounced">Unnannounced</string>
     <string name="no">No</string>
